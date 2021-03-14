@@ -1,0 +1,8 @@
+<h1>Welcome to the Chitter App!</h1>
+<h2>Post your peep here:</h2>
+
+<%= form_with(url: "/peeps", method: "post") do %>
+  <%= label_tag(@message, "Post your peep:") %>
+  <%= text_field_tag(:peep) %>
+  <%= submit_tag("Peep") %>
+<% end %>
