@@ -4,8 +4,23 @@ class ChitterController < ApplicationController
   end
 
   def peeps
-    p @message = params[:peep]
+    thirdpeep = Peep.new(username: "Katerina", peep: params[:neep])
+    thirdpeep.save
+    # p @message = params[:neep]
     @peeps = Peep.all
+
+    # def new
+    #   @peeps = Peep.new
+    # end
+    #
+    # def create
+    #   @peep = Peep.new(username: "", peep: "...")
+    #   if @peep.save
+    #     redirect_to @peep
+    #   else
+    #     render :new
+    #   end
+    # end
 
   end
 end
