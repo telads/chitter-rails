@@ -5,6 +5,8 @@ class CreatePeeps < ActiveRecord::Migration[6.1]
       t.text :peep
 
       t.timestamps
+
+
     end
   end
 end
