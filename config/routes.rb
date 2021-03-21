@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   post '/peeps', to: 'chitter#peeps'
 
+
+  get '/sign-up', to: 'home#sign_up'
+
 end
