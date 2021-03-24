@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   get '/sign-up', to: 'home#sign_up'
 
+  post '/users', to: 'user#users'
+
 end

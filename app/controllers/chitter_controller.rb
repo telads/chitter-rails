@@ -8,8 +8,8 @@ class ChitterController < ApplicationController
     thirdpeep.save
     # p @message = params[:neep]
     @peeps = Peep.order(created_at: :desc)
-    
 
+  end
     # def new
     #   @peeps = Peep.new
     # end
@@ -23,5 +23,4 @@ class ChitterController < ApplicationController
     #   end
     # end
 
-  end
 end
