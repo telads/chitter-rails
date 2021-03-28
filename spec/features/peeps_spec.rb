@@ -16,11 +16,12 @@ feature 'peeps page displaying peeps' do
       visit '/'
       fill_in "neep", with: "testpeep"
       click_button 'Submit'
-      expect(page).to have_content "Your peep has been posted!\ntestpeep 2021-01-01 00:00:00 UTC"
+      expect(page).to have_content "testpeep 2021-01-01 00:00:00 UTC"
       visit '/'
+        Timecop.freeze(Time.local(2022))
       fill_in "neep", with: "testpeep2"
       click_button 'Submit'
-      expect(page).to have_content "Your peep has been posted!\ntestpeep 2021-01-01 00:00:00 UTC testpeep2 2021-01-01 00:00:00 UTC"
+      expect(page).to have_content "testpeep2 2022-01-01 00:00:00 UTC"
       save_and_open_page
   end
 
