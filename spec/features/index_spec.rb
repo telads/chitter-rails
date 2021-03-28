@@ -12,4 +12,12 @@ feature 'index page' do
     visit '/'
     expect(page).to have_content("Welcome to the Chitter App!")
   end
+
+  feature 'index page' do
+    scenario 'an unregistered user cannot post a peep from the index page' do
+      visit '/'
+      expect(page).to have_content("Sign up to Chitter!")
+    end
+  end
+
 end

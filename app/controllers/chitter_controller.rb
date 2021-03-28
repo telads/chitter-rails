@@ -1,6 +1,10 @@
 class ChitterController < ApplicationController
   def index
-
+    if session[:current_user_id]
+      render :index
+    else
+      redirect_to '/sign-up'
+    end
   end
 
   def peeps
