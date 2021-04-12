@@ -17,7 +17,7 @@ feature 'peeps page displaying peeps' do
       fill_in "neep", with: "testpeep2"
       click_button 'Submit'
       expect(page).to have_content "testpeep2 2021-01-01 00:00:00 UTC"
-      save_and_open_page
+      # save_and_open_page
   end
 
   after do
