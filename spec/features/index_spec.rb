@@ -4,7 +4,6 @@ require 'signupmethod'
 feature 'index page' do
   scenario 'only the user can see the index page' do
     sign_up
-    visit '/'
     expect(page).to have_content("Welcome to the Chitter App!")
   end
 

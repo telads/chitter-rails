@@ -8,5 +8,6 @@ def sign_up
   fill_in "user_password", with: "test123"
   fill_in "user_password_confirmation", with: "test123"
   click_button "Create account"
+  
 
 end
